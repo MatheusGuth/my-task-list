@@ -142,3 +142,29 @@
     color: var(--color-foreground);
   }
 }
+
+/*
+ * Task priority accents: low, mid, high, critical.
+ * Used by the priority picker, the filter chips and the badges in the list.
+ */
+:root {
+  --priority-low: oklch(0.55 0.03 255);
+  --priority-mid: oklch(0.58 0.16 250);
+  --priority-high: oklch(0.68 0.16 75);
+  --priority-critical: oklch(0.58 0.21 25);
+}
+
+.dark {
+  --priority-low: oklch(0.72 0.03 255);
+  --priority-mid: oklch(0.72 0.14 250);
+  --priority-high: oklch(0.8 0.15 80);
+  --priority-critical: oklch(0.72 0.19 22);
+}
+
+@theme inline {
+  --color-priority-low: var(--priority-low);
+  --color-priority-mid: var(--priority-mid);
+  --color-priority-high: var(--priority-high);
+  --color-priority-critical: var(--priority-critical);
+}
+
